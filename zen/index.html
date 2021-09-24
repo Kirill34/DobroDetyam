@@ -1,0 +1,38 @@
+<head>
+        <title>Детский ДЗЕН</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </head>
+    <body style="background-image: url('/images/background.jpg')">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" style="background: #FFFFAC">
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="background: #FFFFAC; font-family: 'Comic Sans MS'">
+            <ul class="navbar-nav mr-auto" style="background: #FFFFAC; width: 100%;">
+
+                <li id="linews" class="nav-item col-sm float-left" style="width: 18%; background: aqua;" onclick="document.getElementById('zenblock').hidden=false; document.getElementById('msgblock').hidden=true; document.getElementById('linews').style.background='aqua'; document.getElementById('limsg').style.background='#FFFFAC'; return false;">
+                    <img src="images/icons/newspaper-variant.png" style="width: 70px; height: 70px;">
+                    <p style="font-size: xx-large;">Новости</p>
+                </li>
+                <li id="limsg" class="nav-item col-sm float-left" style="width: 18%;" onclick="document.getElementById('zenblock').hidden=true; document.getElementById('msgblock').hidden=false; document.getElementById('linews').style.background='#FFFFAC'; document.getElementById('limsg').style.background='aqua'; return false;">
+                    <img src="images/icons/message.png" style="width: 70px; height: 70px;">
+                    <p style="font-size: xx-large;">Сообщения</p>
+                </li>
+                <li class="nav-item col-sm" style="width: 18%;">
+                    <img src="images/icons/account.png" style="width: 70px; height: 70px;">
+                    <p style="font-size: xx-large;">Личный кабинет</p>
+                </li>
+                <li class="nav-item col-sm float-right" style="width: 18%;">
+                    <img src="images/icons/auto-fix.png" style="width: 70px; height: 70px;">
+                    <p style="font-size: xx-large;">Список желаний</p>
+                </li>
+                <li class="nav-item col-sm float-right" style="width: 18%;">
+                    <img src="images/icons/web.png" style="width: 70px; height: 70px;">
+                    <p style="font-size: xx-large;">Интернет</p>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
+</body>
+</html>
