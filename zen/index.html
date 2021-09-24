@@ -10,15 +10,15 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent" style="background: #FFFFAC; font-family: 'Comic Sans MS'">
             <ul class="navbar-nav mr-auto" style="background: #FFFFAC; width: 100%;">
 
-                <li id="linews" class="nav-item col-sm float-left" style="width: 18%; background: aqua;" onclick="document.getElementById('zenblock').hidden=false; document.getElementById('msgblock').hidden=true; document.getElementById('linews').style.background='aqua'; document.getElementById('limsg').style.background='#FFFFAC'; return false;">
+                <li id="linews" class="nav-item col-sm float-left" style="width: 18%; background: aqua;" onclick="document.getElementById('zenblock').hidden=false; document.getElementById('account_info').hidden=true; document.getElementById('msgblock').hidden=true; document.getElementById('linews').style.background='aqua'; document.getElementById('limsg').style.background='#FFFFAC'; document.getElementById('liaccount').style.background='#FFFFAC'; return false;">
                     <img src="images/icons/newspaper-variant.png" style="width: 70px; height: 70px;">
                     <p style="font-size: xx-large;">Новости</p>
                 </li>
-                <li id="limsg" class="nav-item col-sm float-left" style="width: 18%;" onclick="document.getElementById('zenblock').hidden=true; document.getElementById('msgblock').hidden=false; document.getElementById('linews').style.background='#FFFFAC'; document.getElementById('limsg').style.background='aqua'; return false;">
+                <li id="limsg" class="nav-item col-sm float-left" style="width: 18%;" onclick="document.getElementById('zenblock').hidden=true; document.getElementById('account_info').hidden=true; document.getElementById('msgblock').hidden=false; document.getElementById('linews').style.background='#FFFFAC'; document.getElementById('limsg').style.background='aqua'; document.getElementById('liaccount').style.background='#FFFFAC'; return false;">
                     <img src="images/icons/message.png" style="width: 70px; height: 70px;">
                     <p style="font-size: xx-large;">Сообщения</p>
                 </li>
-                <li class="nav-item col-sm" style="width: 18%;">
+                <li id="liaccount" class="nav-item col-sm" style="width: 18%;" onclick="document.getElementById('zenblock').hidden=true; document.getElementById('account_info').hidden=false; document.getElementById('msgblock').hidden=true; document.getElementById('linews').style.background='#FFFFAC'; document.getElementById('limsg').style.background='#FFFFAC'; document.getElementById('liaccount').style.background='aqua'; return false;">
                     <img src="images/icons/account.png" style="width: 70px; height: 70px;">
                     <p style="font-size: xx-large;">Личный кабинет</p>
                 </li>
@@ -1022,6 +1022,34 @@
                     <p style="opacity: 50%;">
                         сегодня, 12:03
                     </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="account_info">
+        <table class="table table-hover">
+            <tr class="table-secondary">
+                <td rowspan="4" style="width: min-content;">
+                    <img src="images/icons/account.png" style="width: 70px; height: 70px;">
+                </td>
+                <td class="table-secondary">
+                    Иванов
+                </td>
+            </tr>
+            <tr class="table-secondary">
+                <td class="table-secondary">
+                    Иван
+                </td>
+            </tr>
+            <tr class="table-secondary">
+                <td class="table-secondary">
+                    Иванович
+                </td>
+            </tr>
+            <tr class="table-secondary">
+                <td class="table-secondary">
+                    10 лет
                 </td>
             </tr>
         </table>
