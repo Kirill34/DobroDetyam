@@ -1,9 +1,11 @@
 <html>
-    <head>
+
         <title>Детский ДЗЕН</title>
+        <meta charset="UTF-8">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="script.js" type="text/javascript"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     </head>
     <body style="background-image: url('images/background.png')">
 
@@ -1036,56 +1038,26 @@
                 <td rowspan="4" style="width: min-content;">
                     <img src="images/icons/account.png" style="width: 70px; height: 70px;">
                 </td>
-                <td class="table-secondary">
+                <td class="table-secondary" id="secondname">
                     Иванов
                 </td>
             </tr>
             <tr class="table-secondary">
-                <td class="table-secondary">
+                <td class="table-secondary" id="name">
                     Иван
                 </td>
             </tr>
             <tr class="table-secondary">
-                <td class="table-secondary">
+                <td class="table-secondary" id="patronic">
                     Иванович
                 </td>
             </tr>
             <tr class="table-secondary">
-                <td class="table-secondary">
+                <td class="table-secondary" id="age">
                     10 лет
                 </td>
             </tr>
-            <tr class="table-primary">
-                <td colspan="2">
-                    <b>
-                    Медицинская информация
-                    </b>
-                </td>
-            </tr>
-            <tr class="table-secondary">
-                <td>
-                    Группа крови
-                </td>
-                <td>
-                    3, положительная
-                </td>
-            </tr>
-            <tr class="table-secondary">
-                <td>
-                    Пищевые противопоказания
-                </td>
-                <td>
-                    Аллергия на рыбу
-                </td>
-            </tr>
-            <tr class="table-secondary">
-                <td>
-                    Занятия спортом
-                </td>
-                <td>
-                    Разрешены за исключением бега
-                </td>
-            </tr>
+
 
             <tr class="table-primary">
                 <td colspan="2">
@@ -1205,6 +1177,13 @@
     <script type="text/javascript">
         hideAll();
         document.getElementById('linews').click()
+        $.get('api/children.php',function (data) {
+            child=JSON.parse(data)
+            document.getElementById('age').textContent=child.age+" лет"
+            document.getElementById('name').textContent=child.name
+            document.getElementById('secondname').textContent=child.secondname
+            document.getElementById('patronic').textContent=child.patronic
+        })
     </script>
 </body>
 </html>
