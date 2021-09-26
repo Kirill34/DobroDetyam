@@ -192,6 +192,15 @@
 
         <div class="container" style="background: white; opacity: 80%; margin-top: 20px;">
             <span class="badge badge-warning" style="font-size: xx-large">
+                Мои желания. Скоро они будут исполнены)))
+            </span>
+            <div id="childwishes">
+
+            </div>
+        </div>
+
+        <div class="container" style="background: white; opacity: 80%; margin-top: 20px;">
+            <span class="badge badge-warning" style="font-size: xx-large">
             Исполненные желания
         </span>
         <div class="row" style="padding: 20px">
@@ -307,6 +316,27 @@
                     "</div>";
             }
             document.getElementById('zenblock').innerHTML="<div class='row'>"+document.getElementById('zenblock').innerHTML+"</div>"
+        })
+
+        $.get('api/wishes.php', function (data) {
+   
+            events = JSON.parse(data)
+            for (i=0; i<events.length; i++)
+            {
+                item=events[i]
+                document.getElementById('childwishes').innerHTML+=
+                    "<div class='col-sm' style='margin-top: 20px; margin-bottom: 20px;'>\n" +
+                    "    <div class='card style=\"width: 18rem; opacity: 90%; '>\n" +
+                    "        <img class='card-img-top' style='width: 230px;' src='"+item.photo_url+"' alt='Card image cap'>\n" +
+                    "        <div class='card-body'>\n" +
+                    "            <h5 class='card-title'>"+item.name+"</h5>\n" +
+                    "            <p class='card-text'>"+item.description+"</p>\n" +
+                    "            <a href='#' class='btn btn-warning'>Go somewhere</a>\n" +
+                    "        </div>\n" +
+                    "    </div>\n" +
+                    "</div>";
+            }
+            document.getElementById('childwishes').innerHTML="<div class='row'>"+document.getElementById('childwishes').innerHTML+"</div>"
         })
 
 
